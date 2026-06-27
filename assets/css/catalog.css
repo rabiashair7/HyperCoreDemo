@@ -1,0 +1,283 @@
+.catalog-page {
+    background: #0f172a;
+    min-height: 100vh;
+    color: white;
+    padding: 60px 8%;
+}
+
+
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalog-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.catalog-header p {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 360px));
+    gap: 25px;
+    justify-content: center;
+}
+
+
+.catalog-card {
+    position: relative;
+    background: #111827;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #22d3ee;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(34, 211, 238, 0.18);
+}
+
+
+
+.catalog-image-box {
+    height: 280px;
+    background: #0f1117;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+.catalog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transition: 0.35s;
+}
+
+.catalog-card:hover .catalog-image {
+    transform: scale(1.05);
+}
+
+
+
+.catalog-info {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.catalog-category {
+    color: #22d3ee;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.catalog-info h3 {
+    margin: 12px 0;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.catalog-price {
+    color: #10b981;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.catalog-stock {
+    margin-top: 10px;
+
+    display: inline-block;
+    width: fit-content;
+
+    padding: 6px 12px;
+    border-radius: 999px;
+
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #f59e0b,
+        #ef4444
+    );
+
+    color: white;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    z-index: 10;
+}
+
+
+.catalog-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.details-btn,
+.cart-btn {
+    flex: 1;
+
+    text-align: center;
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.details-btn {
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(34, 211, 238, 0.4);
+
+    color: #22d3ee;
+}
+
+.details-btn:hover {
+    background: #22d3ee;
+    color: #08111f;
+}
+
+.cart-btn {
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #06b6d4
+    );
+
+    color: white;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(
+            34,
+            211,
+            238,
+            0.4
+        );
+}
+
+
+
+.empty-table-message {
+    text-align: center;
+
+    grid-column: 1 / -1;
+
+    background: #111827;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    color: #9ca3af;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .catalog-page {
+        padding: 40px 20px;
+    }
+
+    .catalog-header h1 {
+        font-size: 32px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-image-box {
+        height: 240px;
+    }
+
+    .catalog-actions {
+        flex-direction: column;
+    }
+}
+.sort-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.sort-form label {
+    color: #d1d5db;
+    font-weight: bold;
+}
+
+.sort-form select {
+    background: #111827;
+    color: #ffffff;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.sort-form select:focus {
+    outline: none;
+    border-color: #00d9ff;
+}
+
+@media (max-width: 768px) {
+    .sort-form {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
